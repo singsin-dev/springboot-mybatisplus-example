@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: myabtisplusAppliaction
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: dawjxxx
+  # swagger2需配置的参数，无则报错
+  # Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+mybatis-plus:
+  # 配置实体类位置
+  type-aliases-package: com.leo.mybatisplus
+  # 开启mybatisplussql日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
